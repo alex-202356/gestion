@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" class="w3-dark-grey">
+
+<script>
+    function accion(){
+        console.log('está funcionando mi boton');
+        let ancla = document.getElementsByClassName('nav-enlace');
+        for(let i = 0; i < ancla.length; i++) ancla[i].classList.toggle('desaparece');
+    }
+</script>
+
+
+<div ng-app="myApp" ng-controller="myCtrl" text align="center">
+
+   <br>
+    <H2>REGISTRATE Y CONOCE A {{firstName + " " + lastName}}
+    </H2>
+
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.firstName = "CALZADOS";
+        $scope.lastName = "ARRAZATE";
+
+    });
+    <!-- HACEMOS USO DE NG_CONTROLER PARA DEFINIR UN COTROLADOR Y HACER USO DE VARIABLES CREADAS ES DECIR PUSE REGISTRATE  EN DODNE SE VAN A REGISTRA EN CALZADOS ARRAZATE-->
+</script>
+
+
+
+<div class="w3-container">
+    <h2>Registrarse</h2>
+    
+    <div class="w3-card-4">
+      <div class="w3-container w3-green">
+        <h2>Formulario de registro</h2>
+      </div>
+  
+      <form class="w3-container" method="post" action="/regUsuario">
+        <p>
+        <input class="w3-input" type="text" name="usuario">
+        <label>Nombre de usuario</label></p>
+        <p>     
+        <input class="w3-input" type="text" name="correo">
+        <label>Correo</label></p>
+        <p>     
+        <input class="w3-input" type="password" name="pass">
+        <label>Contraseña</label></p>
+        <p>     
+         <input class="w3-input" type="text" name="nombre">
+         <label>Nombre</label></p>
+        <p>     
+        <input class="w3-input" type="text" name="telefono">
+        <label>Numero de telefono</label></p>
+
+        <input class="w3-button" type="submit" value="Guardar"></p>
+      </form>
+    </div>
+  </div>
+
+<br>
+<!-- Hacemos uso de footer para el pie de pagina-->
+<nav><footer>Contáctanos al 9921034440 o envía un correo a torcou22@gmail.com</footer></nav>
+
+
+</body>
+</html>

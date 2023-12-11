@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contacto</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="">
+    <div class="w3-bar w3-black">
+        <a href="calzado" class="w3-bar-item w3-button">Inicio</a>
+        <a href="nosotros" class="w3-bar-item w3-button">Nosotros</a>
+        <a href="productos" class="w3-bar-item w3-button">Productos</a>
+        <a href="contacto" class="w3-bar-item w3-button">Contacto</a>
+        <a href="galeria" class="w3-bar-item w3-button">Galeria</a>
+        <a href="/" class="w3-bar-item w3-button w3-right">Cerrar sesion</a>
+      </div>
+<script>
+    function accion(){
+        console.log('está funcionando mi boton');
+        let ancla = document.getElementsByClassName('nav-enlace');
+        for(let i = 0; i < ancla.length; i++) ancla[i].classList.toggle('desaparece');
+    }
+</script>
+
+<h1 style="background-color: violet">CONTACTANOS PARA PRECIOS DE MAYOREO</h1>
+
+<div class="container-form">
+    <div class="info-form">
+        <h2>Contáctanos</h2>
+        <p>Conocer la opinión de nuestros clientes es muy importante para nosotros, extendemos la invitación a llenar nuestro formulario para solicitar información sobre los productos que ofrecemos. A la brevedad posible, uno de nuestros representantes atenderá la solicitud.</p>
+        <a href="#"><i class="fa fa-phone"></i> 9921034440 0  9921189973</a>
+        <a href="#"><i class="fa fa-envelope"></i> torcou22@gmail.com</a>
+        <a href="#"><i class="fa fa-map-marked"></i> La concordia, Chiapas</a>
+    
+    </div>
+    <form name="myForm" novalidate method="POST" action="registrarmsj.php">
+        <div class="input">
+        <label>
+            <input type="text" placeholder="Tu Nombre" name="nombres"  ng-model="nombres" required maxlength="35">
+            <span style="color: blue">{{form.nombres.$valid}} </span>
+           	<span style="color:red" ng-show="myForm.nombres.$dirty && myForm.nombres.$invalid">el nombre no es valido </span>
+            
+        </label>
+
+        </div>
+
+        <label>
+            <input type="email" name="email" placeholder="Tu Email" class="campo" ng-model="email" required maxlength="60">
+			<span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">Se requiere un correo valido</span>
+            <textarea name="mensaje" placeholder="Tu Mensaje..." ng-model="mensaje" required></textarea>
+		<span style="color:red" ng-show="myForm.mensaje.$dirty && myForm.mensaje.$invalid">Se requiere un mensaje valido</span>
+        </label>
+
+        <button type="submit" name="enviar" value="Enviar Mensaje"  class="btn-enviar" ng-hide="myForm.nombres.$invalid || myForm.email.$invalid || myForm.mensaje.$invalid">Enviar Mensaje</button>
+
+
+    </form>
+
+</div>
+
+
+<!-- Hacemos uso de footer para el pie de pagina-->
+<nav><footer>Contáctanos al 9921034440 o envía un correo a torcou22@gmail.com</footer></nav>
+
+</body>
+</html>

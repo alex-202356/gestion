@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="w3-bar w3-black">
+        <a href="calzado" class="w3-bar-item w3-button">Inicio</a>
+        <a href="nosotros" class="w3-bar-item w3-button">Nosotros</a>
+        <a href="productos" class="w3-bar-item w3-button">Productos</a>
+        <a href="contacto" class="w3-bar-item w3-button">Contacto</a>
+        <a href="galeria" class="w3-bar-item w3-button">Galeria</a>
+        <a href="/" class="w3-bar-item w3-button w3-right">Cerrar sesion</a>
+      </div>
+<script>
+    function accion(){
+        console.log('está funcionando mi boton');
+        let ancla = document.getElementsByClassName('nav-enlace');
+        for(let i = 0; i < ancla.length; i++) ancla[i].classList.toggle('desaparece');
+    }
+</script>
+<p>
+
+</p>
+<!-- hacemos uso de audio-->
+<div style="text-align: center"><audio controls>
+    <source src="IMAGENES/spot.mp3" type="audio/mp3">
+    Tu navegador no soporta el tag audio
+</audio></div>
+<hr>
+<p>
+
+</p>
+<div style="text-align: center;"><video width="350" height="350" controls>
+    <source src="IMAGENES/mov-bbb.mp4.mp4" type="video/mp4">
+</video></div>
+<br>
+
+<div style="text-align: center;"><video width="350" height="350" controls>
+    <source src="IMAGENES/anuncio.mp4" type="video/mp4">
+</video></div>
+<br>
+<div style="text-align: center;"><video width="350" height="350" controls>
+    <source src="IMAGENES/video.mp4" type="video/mp4">
+</video></div>
+
+<p>
+
+</p>
+<!-- Hacemos uso de footer para el pie de pagina-->
+<nav><footer>Contáctanos al 9921034440 o envía un correo a torcou22@gmail.com</footer></nav>
+
+</body>
+
+</html>

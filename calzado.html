@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="icon/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYqWBWaCeO5Nhu5hQEsXxjZFH2Rj94AGRYOQmEARzZYK--jo2I0Z60FzfV9w8RiQOw9w&usqp=CAU">
+    <title>Calzados Arrazate</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            padding: 10px 30px;
+        }
+    </style>
+    <style>
+        h2 {
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        footer {
+            text-align: center;
+        }
+    </style>
+    <style>
+        q{
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--- se hace uso de nav y botton y enlaces  -->
+<div class="w3-bar w3-black">
+    <a href="calzado" class="w3-bar-item w3-button">Inicio</a>
+    <a href="nosotros" class="w3-bar-item w3-button">Nosotros</a>
+    <a href="productos" class="w3-bar-item w3-button">Productos</a>
+    <a href="contacto" class="w3-bar-item w3-button">Contacto</a>
+    <a href="galeria" class="w3-bar-item w3-button">Galeria</a>
+    <a href="/" class="w3-bar-item w3-button w3-right">Cerrar sesion</a>
+  </div>
+<script>
+    function accion(){
+        console.log('está funcionando mi boton');
+        let ancla = document.getElementsByClassName('nav-enlace');
+        for(let i = 0; i < ancla.length; i++) ancla[i].classList.toggle('desaparece');
+    }
+</script>
+<div> 
+    <img src="IMAGENES/7.png" width="180" height="100">
+</div>
+<h1 style="background-color:violet">CALZADOS ARRAZATE <p><q> CALZANDO BIEN Y BONITO</q></p></h1>
+<!-- citamos un texto corto-->
+
+<div ng-app="" ng-init="myText='BIENVENIDOS A CALZADOS ARRAZATE'">
+
+    <h1>{{myText}}</h1>
+</div>
+
+
+<!-- se usa div para las imagenes-->
+<div class="contenedor-imagen">
+    <img src="IMAGENES/9.jpg" width="350" height="200" hspace="10">
+    <img src="IMAGENES/10.jpg" width="350" height="200" hspace="10">
+    <img src="IMAGENES/11.jpg" width="350" height="200" hspace="10">
+    <img src="IMAGENES/12.jpg" width="350" height="200" hspace="10">
+   
+</div>
+<hr>
+
+<div class="w3-content w3-display-container">
+    <img class="mySlides" src="IMAGENES/1.jpg" style="width:100%">
+    <img class="mySlides" src="IMAGENES/2.jpg" style="width:100%">
+    <img class="mySlides" src="IMAGENES/3.jpg" style="width:100%">
+    <img class="mySlides" src="IMAGENES/4.jpg" style="width:100%">
+  
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+  </script>
+  
+  </body>
+
+
+
+<p style="text-align: center;"> En Zapatería Arrazate somos una pequeña empresa  de calzado para dama de calidad y comodidad. 
+  <br>   Con nuestros productos encontrarán buen gusto y moda, todo esto garantizado por nuestros 6 años de experiencia en el mercado.</p></h2>
+
+<hr>
+
+<hr>
+<p> </p>
+
+<!-- Hacemos uso de footer para el pie de pagina-->
+<nav><footer>Contáctanos al 9921034440 o envía un correo a torcou22@gmail.com</footer></nav>
+
+</body>
+</html>
